@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ÉLORA — Timeless Jewelry</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        Complimentary shipping on orders over ₹2,000
+    </div>
+
+
+    <!-- Navigation -->
+    <header class="header">
+
+        <div class="nav-container">
+
+            <a href="#" class="logo">ÉLORA</a>
+
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#collection">Collection</a>
+                <a href="#story">Our Story</a>
+                <a href="#journal">Journal</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+
+                <button class="icon-btn" id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="icon-btn" id="wishlistBtn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="count" id="wishlistCount">0</span>
+                </button>
+
+                <button class="icon-btn" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="count" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <button class="close-menu" id="closeMenu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#story">Our Story</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+
+        <button class="close-search" id="closeSearch">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="search-box">
+
+            <p>SEARCH ÉLORA</p>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search jewelry..."
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">THE NEW COLLECTION</p>
+
+                <h1>
+                    Jewelry that<br>
+                    <em>speaks softly.</em>
+                </h1>
+
+                <p class="hero-text">
+                    Discover timeless pieces designed to become
+                    part of your everyday story.
+                </p>
+
+                <a href="#collection" class="primary-btn">
+                    Explore Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Category Section -->
+        <section class="categories section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">EXPLORE</p>
+
+                <h2>Find your signature.</h2>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="#collection" class="category-card">
+                    <div class="category-image rings-image"></div>
+                    <div class="category-info">
+                        <h3>Rings</h3>
+                        <span>Discover →</span>
+                    </div>
+                </a>
+
+
+                <a href="#collection" class="category-card">
+                    <div class="category-image necklace-image"></div>
+                    <div class="category-info">
+                        <h3>Necklaces</h3>
+                        <span>Discover →</span>
+                    </div>
+                </a>
+
+
+                <a href="#collection" class="category-card">
+                    <div class="category-image earrings-image"></div>
+                    <div class="category-info">
+                        <h3>Earrings</h3>
+                        <span>Discover →</span>
+                    </div>
+                </a>
+
+
+                <a href="#collection" class="category-card">
+                    <div class="category-image bracelets-image"></div>
+                    <div class="category-info">
+                        <h3>Bracelets</h3>
+                        <span>Discover →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Collection -->
+        <section class="collection section" id="collection">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">ÉLORA EDIT</p>
+
+                <h2>Pieces to keep forever.</h2>
+
+                <p>
+                    Thoughtfully designed jewelry for
+                    everyday elegance.
+                </p>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <button class="filter-btn active" data-category="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-category="rings">
+                    Rings
+                </button>
+
+                <button class="filter-btn" data-category="necklaces">
+                    Necklaces
+                </button>
+
+                <button class="filter-btn" data-category="earrings">
+                    Earrings
+                </button>
+
+                <button class="filter-btn" data-category="bracelets">
+                    Bracelets
+                </button>
+
+            </div>
+
+
+            <!-- Products will come from JavaScript -->
+            <div class="product-grid" id="productGrid"></div>
+
+        </section>
+
+
+        <!-- Editorial Banner -->
+        <section class="editorial">
+
+            <div class="editorial-content">
+
+                <p class="eyebrow">LESS, BUT BETTER</p>
+
+                <h2>
+                    Made for the moments<br>
+                    that matter.
+                </h2>
+
+                <p>
+                    Jewelry shouldn't simply complete an outfit.
+                    It should become part of your story.
+                </p>
+
+                <a href="#story" class="secondary-btn">
+                    Discover ÉLORA
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Story -->
+        <section class="story section" id="story">
+
+            <div class="story-image"></div>
+
+            <div class="story-content">
+
+                <p class="eyebrow">OUR STORY</p>
+
+                <h2>
+                    Quiet luxury.<br>
+                    Meaningful design.
+                </h2>
+
+                <p>
+                    ÉLORA was created with one simple idea:
+                    jewelry should feel personal.
+                </p>
+
+                <p>
+                    Every piece is designed with clean lines,
+                    delicate details and timeless elegance —
+                    made to be worn today and loved for years.
+                </p>
+
+                <a href="#contact" class="text-link">
+                    Learn more about us →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Values -->
+        <section class="values section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">WHY ÉLORA</p>
+
+                <h2>Designed with intention.</h2>
+
+            </div>
+
+
+            <div class="values-grid">
+
+                <div class="value-card">
+
+                    <i class="fa-regular fa-gem"></i>
+
+                    <h3>Timeless Design</h3>
+
+                    <p>
+                        Elegant pieces designed beyond
+                        seasonal trends.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <h3>Thoughtfully Made</h3>
+
+                    <p>
+                        Carefully considered details
+                        from design to finish.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>Made to Keep</h3>
+
+                    <p>
+                        Jewelry created to become
+                        part of your everyday moments.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reviews -->
+        <section class="reviews section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">LOVE NOTES</p>
+
+                <h2>What they say.</h2>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “The necklace is even more beautiful
+                        in person. So delicate and elegant.”
+                    </p>
+
+                    <span>— Aanya</span>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “Beautiful packaging, beautiful jewelry,
+                        and such a lovely experience.”
+                    </p>
+
+                    <span>— Meera</span>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “My new everyday earrings.
+                        Absolutely love them.”
+                    </p>
+
+                    <span>— Riya</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Journal -->
+        <section class="journal section" id="journal">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">THE JOURNAL</p>
+
+                <h2>Notes from ÉLORA.</h2>
+
+            </div>
+
+
+            <div class="journal-grid">
+
+                <article class="journal-card">
+
+                    <div class="journal-image journal-one"></div>
+
+                    <div class="journal-content">
+
+                        <span>STYLE GUIDE</span>
+
+                        <h3>
+                            How to build your everyday
+                            jewelry collection
+                        </h3>
+
+                        <a href="#">Read story →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="journal-card">
+
+                    <div class="journal-image journal-two"></div>
+
+                    <div class="journal-content">
+
+                        <span>INSPIRATION</span>
+
+                        <h3>
+                            The art of wearing
+                            simple jewelry
+                        </h3>
+
+                        <a href="#">Read story →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="journal-card">
+
+                    <div class="journal-image journal-three"></div>
+
+                    <div class="journal-content">
+
+                        <span>ÉLORA WORLD</span>
+
+                        <h3>
+                            Jewelry that becomes
+                            part of your story
+                        </h3>
+
+                        <a href="#">Read story →</a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+
+            <div class="newsletter-content">
+
+                <p class="eyebrow">STAY CLOSE</p>
+
+                <h2>
+                    A little ÉLORA<br>
+                    in your inbox.
+                </h2>
+
+                <p>
+                    Sign up for new collections,
+                    stories and exclusive offers.
+                </p>
+
+
+                <form id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h2>ÉLORA</h2>
+
+                <p>
+                    Timeless jewelry for
+                    everyday stories.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>SHOP</h4>
+
+                <a href="#collection">All Jewelry</a>
+                <a href="#collection">Rings</a>
+                <a href="#collection">Necklaces</a>
+                <a href="#collection">Earrings</a>
+                <a href="#collection">Bracelets</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>ABOUT</h4>
+
+                <a href="#story">Our Story</a>
+                <a href="#journal">Journal</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>CONTACT</h4>
+
+                <a href="mailto:hello@elora.com">
+                    hello@elora.com
+                </a>
+
+                <a href="tel:+919999999999">
+                    +91 99999 99999
+                </a>
+
+                <p>
+                    Mon — Sat<br>
+                    10:00 AM — 6:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ÉLORA. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>Your Bag</h2>
+
+            <button id="closeCart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <p class="empty-cart">
+                Your bag is currently empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+
+        <div class="product-modal">
+
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        Added to your bag.
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
